@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 const Student = require("./model/studentModel.js");
 const { abort } = require("process");
 
+const cors = require("cors");
+
 const server = express();
+server.use(cors());
 mongoose
   .connect(
     "mongodb+srv://ankushiit21:Hns10l24u4zJh41N@cluster0.kqcbbv1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
